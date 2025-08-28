@@ -37,9 +37,9 @@ export default function Footer() {
       <div className={styles.contactContainer}>
         <div className={styles.contacts}>
           <h3>CONTACTS</h3>
-          <p>123-456-7890</p>
+          <p>000-0000-0000</p>
           <a href="mailto:info@presson.com" className={`${styles.email} email`}>
-            info@presson.com
+            info@gmail.com
           </a>
           <div className={styles.socials}>
             <a

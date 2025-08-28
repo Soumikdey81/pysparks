@@ -3,23 +3,31 @@ import styles from "./Team.module.css";
 
 const founders = [
   {
-    name: "Esther Bryce",
-    role: "Founder · Interior Designer",
+    name: "Founder One",
+    role: "Founder · Business Process & Consulting Solutions",
     imgSrc: "/team.avif",
   },
-  { name: "Lianne Wilson", role: "Founder · Broker", imgSrc: "/team.avif" },
+  {
+    name: "Founder Two",
+    role: "Founder · Web & App Development",
+    imgSrc: "/team.avif",
+  },
 ];
 
 const consultants = [
-  { name: "Consultant One", role: "Sales Consultant", imgSrc: "/team.avif" },
+  {
+    name: "Consultant One",
+    role: "Consultant · Analytical Solutions",
+    imgSrc: "/team.avif",
+  },
   {
     name: "Consultant Two",
-    role: "Architect Consultant",
+    role: "Consultant · AI Bots & Automation",
     imgSrc: "/team.avif",
   },
   {
     name: "Consultant Three",
-    role: "Interior Consultant",
+    role: "Consultant · Digital Marketing",
     imgSrc: "/team.avif",
   },
 ];
@@ -62,9 +70,11 @@ export default function MeetOurTeam() {
           <span className={styles.titleUnderline}></span>
         </h1>
         <p className={styles.description}>
-          Our strength lies in our individuality. Set up by Esther Bryce,
-          Presson's team strives to bring in the best talent in various fields,
-          from architecture to interior design and sales.
+          Our strength lies in our diversity and expertise. Established with a
+          vision to deliver cutting-edge solutions, our team brings together
+          specialists from business consulting, technology, digital marketing,
+          finance, and cybersecurity — all working together to provide
+          innovative and reliable services for our clients.
         </p>
       </div>
 
