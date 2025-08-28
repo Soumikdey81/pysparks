@@ -183,7 +183,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    background: white;
+    background: rgb(234, 234, 234);
     padding: 1rem 1.5rem;
     transform: translateY(-100%);
     opacity: 0;
