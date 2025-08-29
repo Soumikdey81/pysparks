@@ -37,7 +37,7 @@
   margin: 0 auto;
   padding: 5rem 8%;
   gap: 4rem;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   color: #222;
 }
@@ -66,7 +66,7 @@
 }
 
 .text {
-  flex: 1 1 50%;
+  flex: 1 1 55%;
   animation: fadeInRight 1.2s ease forwards;
 }
 
@@ -76,22 +76,32 @@
   letter-spacing: 0.06em;
   margin-bottom: 2rem;
   color: #111;
-  position: relative;
 }
 
 .text p {
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
-  max-width: 640px;
-  line-height: 1.7;
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  line-height: 1.85;
   margin-bottom: 1.6rem;
   color: #444;
+}
+
+.text p em {
+  color: #f0a500;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.finalNote {
+  font-weight: 600;
+  color: #111;
+  margin-top: 2rem;
 }
 
 /* === Services Section === */
 .servicesTitle {
   font-size: 1.6rem;
   font-weight: 700;
-  margin: 2rem 0 1rem 0;
+  margin: 3rem 0 1rem 0;
   color: #111;
 }
 
@@ -146,6 +156,7 @@
   background-color: #f0a500;
   border-radius: 5px;
   animation: slideUnderline 1s ease forwards;
+  margin: 2rem 0;
 }
 
 /* === Responsive Design === */
@@ -163,19 +174,16 @@
 
   .text {
     width: 100%;
+    text-align: left;
   }
 
   .text h1 {
     font-size: clamp(2.2rem, 6vw, 3.2rem);
     margin-bottom: 1.4rem;
-  }
-
-  .text p {
-    max-width: 100%;
+    text-align: center;
   }
 
   .servicesList {
-    text-align: left;
     margin: 0 auto 2rem auto;
     max-width: 400px;
   }
@@ -185,6 +193,6 @@
   }
 
   .underline {
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
   }
 }

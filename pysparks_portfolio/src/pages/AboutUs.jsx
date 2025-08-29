@@ -19,19 +19,65 @@ export default function AboutUs() {
         <div className={styles.text}>
           <h1>ABOUT US</h1>
           <p>
-            We are a dynamic IT solutions and consulting company, driven by
-            innovation and a passion for delivering value to businesses
-            worldwide. Our team of experts blends technology with strategy to
-            empower organizations with smarter, scalable, and future-ready
-            digital solutions.
+            At <strong>PySparks Lab LLP</strong>, we believe that every
+            business—whether a young startup or a growing enterprise—deserves
+            access to the right technology, strategy, and expertise to succeed
+            in today’s dynamic marketplace. Founded with the vision of bridging
+            the gap between innovative ideas and sustainable execution, we are a
+            modern consulting and technology firm dedicated to empowering
+            businesses through tailored solutions.
           </p>
           <p>
-            From end-to-end digital transformation to secure business
-            operations, we specialize in providing high-impact IT support and
-            consultancy tailored to modern enterprises. Our mission is to
-            simplify technology, enhance efficiency, and enable sustainable
-            growth for our clients.
+            We are a startup at heart, driven by curiosity, agility, and a
+            relentless pursuit of excellence. What sets us apart is our ability
+            to combine the passion and energy of a startup with the wisdom and
+            expertise of seasoned professionals. Our core team includes industry
+            experts who have worked with leading multinational corporations
+            (MNCs) across diverse sectors such as technology, finance, digital
+            transformation, and cyber security.
           </p>
+          <p>
+            Our journey began with a simple yet powerful question:{" "}
+            <em>
+              How can businesses—especially those scaling up—leverage technology
+              and consulting expertise to compete on a global stage?
+            </em>{" "}
+            The answer lies in our integrated approach. We don’t just offer
+            services; we provide end-to-end solutions that touch every aspect of
+            business operations—from process optimization and digital presence
+            to data-driven decision-making and risk management.
+          </p>
+          <p>
+            Collaboration is at the core of our DNA. We work closely with our
+            clients, becoming an extension of their teams rather than just
+            external advisors. This ensures that the strategies we design are
+            not only innovative but also practical, implementable, and aligned
+            with long-term goals. Our diverse service portfolio—ranging from
+            business process consulting, web and app development, AI automation,
+            and digital marketing to finance services, cyber crime
+            investigation, and cyber security consulting—is built to address the
+            evolving needs of modern businesses.
+          </p>
+          <p>
+            What truly makes us proud is our ability to empower startups and
+            small-to-medium businesses while also delivering measurable value to
+            established enterprises. For startups, we bring speed,
+            affordability, and innovation. For enterprises, we offer deep
+            expertise, structured consulting, and solutions that drive
+            efficiency and digital transformation.
+          </p>
+          <p>
+            Looking ahead, our mission is clear—to continue being a trusted
+            partner for businesses on their growth journey. We aim to create a
+            future where technology and strategy work hand in hand, enabling
+            businesses to operate smarter, faster, and safer.
+          </p>
+          <p className={styles.finalNote}>
+            At <strong>PySparks Lab LLP</strong>, we are more than consultants;
+            we are your partners in scaling success.
+          </p>
+
+          <div className={styles.underline}></div>
 
           <h2 className={styles.servicesTitle}>Our Core Services</h2>
           <ul className={styles.servicesList}>
@@ -72,7 +118,6 @@ export default function AboutUs() {
               <FaInstagram />
             </a>
           </div>
-          <div className={styles.underline}></div>
         </div>
       </section>
       <Footer />

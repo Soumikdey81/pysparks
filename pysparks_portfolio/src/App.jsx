@@ -2,8 +2,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import PageNotFound from "./pages/PageNotFound";
 import AboutUs from "./pages/AboutUs";
-import WebApplicationDevelopment from "./pages/WebApps";
+import WebApps from "./pages/WebApps";
+import BusinessConsulting from "./pages/BusinessConsulting";
 import ServicesLayout from "./layouts/ServicesLayout";
+import AppDevelopment from "./pages/AppDevelopment";
+import Analytics from "./pages/Analytics";
+import AIAutomation from "./pages/AIAutomation";
+import DigitalMarketing from "./pages/DigitalMarketing";
+import Finance from "./pages/Finance";
+import CyberInvestigation from "./pages/CyberInvestigation";
+import CyberSecurity from "./pages/CyberSecurity";
 
 export default function App() {
   return (
@@ -16,30 +24,15 @@ export default function App() {
 
         {/* Services Section with Layout */}
         <Route path="/services-offered" element={<ServicesLayout />}>
-          <Route
-            path="business-consulting"
-            element={<WebApplicationDevelopment />}
-          />
-          <Route path="web-apps" element={<WebApplicationDevelopment />} />
-          <Route
-            path="app-development"
-            element={<WebApplicationDevelopment />}
-          />
-          <Route path="analytics" element={<WebApplicationDevelopment />} />
-          <Route path="ai-automation" element={<WebApplicationDevelopment />} />
-          <Route
-            path="digital-marketing"
-            element={<WebApplicationDevelopment />}
-          />
-          <Route path="finance" element={<WebApplicationDevelopment />} />
-          <Route
-            path="cyber-investigation"
-            element={<WebApplicationDevelopment />}
-          />
-          <Route
-            path="cyber-security"
-            element={<WebApplicationDevelopment />}
-          />
+          <Route path="business-consulting" element={<BusinessConsulting />} />
+          <Route path="web-apps" element={<WebApps />} />
+          <Route path="app-development" element={<AppDevelopment />} />
+          <Route path="analytics" element={<Analytics />} />
+          <Route path="ai-automation" element={<AIAutomation />} />
+          <Route path="digital-marketing" element={<DigitalMarketing />} />
+          <Route path="finance" element={<Finance />} />
+          <Route path="cyber-investigation" element={<CyberInvestigation />} />
+          <Route path="cyber-security" element={<CyberSecurity />} />
         </Route>
 
         {/* Fallback */}
