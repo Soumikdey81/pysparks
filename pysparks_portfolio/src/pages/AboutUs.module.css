@@ -129,27 +129,6 @@
   left: 0;
 }
 
-/* === Socials === */
-.socials {
-  display: flex;
-  gap: 2rem;
-  margin: 2.5rem 0 1.5rem 0;
-}
-
-.socials a {
-  color: #222;
-  font-size: 1.8rem;
-  transition: transform 0.3s ease, color 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-}
-
-.socials a:hover {
-  color: #f0a500;
-  transform: scale(1.2) rotate(5deg);
-  cursor: pointer;
-}
-
 /* === Underline === */
 .underline {
   height: 0.3rem;
@@ -186,10 +165,6 @@
   .servicesList {
     margin: 0 auto 2rem auto;
     max-width: 400px;
-  }
-
-  .socials {
-    justify-content: center;
   }
 
   .underline {

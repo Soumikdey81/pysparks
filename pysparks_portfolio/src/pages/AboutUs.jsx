@@ -2,6 +2,7 @@ import Navigation from "../components/Navigation";
 import styles from "./AboutUs.module.css";
 import Footer from "../components/Footer";
 import { FaFacebookF, FaLinkedin } from "react-icons/fa";
+import Socials from "../components/Socials";
 
 export default function AboutUs() {
   return (
@@ -92,24 +93,7 @@ export default function AboutUs() {
             <li>Cyber Security Consultancy & Solutions</li>
           </ul>
 
-          <div className={styles.socials}>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Facebook"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Linkedin"
-            >
-              <FaLinkedin />
-            </a>
-          </div>
+          <Socials />
         </div>
       </section>
       <Footer />

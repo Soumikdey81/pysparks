@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./Footer.module.css";
-import { FaFacebookF, FaLinkedin } from "react-icons/fa";
 import Logo from "./Logo";
+import Socials from "./Socials";
 
 export default function Footer() {
   const footerRef = useRef(null);
@@ -45,24 +45,7 @@ export default function Footer() {
           >
             info@pysparkslab.com
           </a>
-          <div className={styles.socials}>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Facebook"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Linkedin"
-            >
-              <FaLinkedin />
-            </a>
-          </div>
+          <Socials />
         </div>
 
         <div className={styles.address}>
