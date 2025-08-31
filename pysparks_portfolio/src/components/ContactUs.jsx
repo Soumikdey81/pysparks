@@ -66,7 +66,7 @@ export default function ContactUs() {
     setStatus("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/sendMail", {
+      const res = await fetch("https://pysparks.vercel.app/api/sendMail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

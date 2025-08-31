@@ -90,7 +90,7 @@ export default function Careers() {
       formData.append("field", form.field);
       formData.append("cv", form.cv);
 
-      const res = await fetch("http://localhost:5000/api/careerApply", {
+      const res = await fetch("https://pysparks.vercel.app/api/careerApply", {
         method: "POST",
         body: formData,
       });
