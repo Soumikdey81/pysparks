@@ -12,6 +12,7 @@ import DigitalMarketing from "./pages/DigitalMarketing";
 import Finance from "./pages/Finance";
 import CyberInvestigation from "./pages/CyberInvestigation";
 import CyberSecurity from "./pages/CyberSecurity";
+import Careers from "./pages/Careers";
 
 export default function App() {
   return (
@@ -20,7 +21,7 @@ export default function App() {
         {/* Public Pages */}
         <Route path="/" element={<Homepage />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/careers" element={<AboutUs />} />
+        <Route path="/careers" element={<Careers />} />
 
         {/* Services Section with Layout */}
         <Route path="/services-offered" element={<ServicesLayout />}>

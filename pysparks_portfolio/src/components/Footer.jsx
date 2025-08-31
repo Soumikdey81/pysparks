@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./Footer.module.css";
-import { FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedin } from "react-icons/fa";
 import Logo from "./Logo";
 
 export default function Footer() {
@@ -37,19 +37,11 @@ export default function Footer() {
       <div className={styles.contactContainer}>
         <div className={styles.contacts}>
           <h3>CONTACTS</h3>
-          <p>000-0000-0000</p>
+          <p>+91 79800 58378</p>
           <a href="mailto:info@presson.com" className={`${styles.email} email`}>
             info@gmail.com
           </a>
           <div className={styles.socials}>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Twitter"
-            >
-              <FaTwitter />
-            </a>
             <a
               href="https://facebook.com"
               target="_blank"
@@ -59,20 +51,21 @@ export default function Footer() {
               <FaFacebookF />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://facebook.com"
               target="_blank"
               rel="noreferrer"
-              aria-label="Instagram"
+              aria-label="Linkedin"
             >
-              <FaInstagram />
+              <FaLinkedin />
             </a>
           </div>
         </div>
 
         <div className={styles.address}>
           <h3>ADDRESS</h3>
-          <p>123 your street name,</p>
-          <p>City name, Country, post code</p>
+          {/* <p>123 your street name,</p> */}
+          <p>Dp Nagar, Belgharia, Kolkata - 700056</p>
+          <p>West Bengal, India</p>
         </div>
       </div>
     </footer>

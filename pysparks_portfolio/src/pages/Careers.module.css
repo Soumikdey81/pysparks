@@ -9,13 +9,13 @@
   }
 }
 
-.contactSectionWrapper {
+.careerSectionWrapper {
   width: 100%;
   background: rgb(234, 234, 234);
   padding: 5rem 0; /* spacing top and bottom */
 }
 
-.contactSection {
+.careerSection {
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 8%;
@@ -28,7 +28,7 @@
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.contactSection.visible {
+.careerSection.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -143,7 +143,7 @@ textarea::placeholder {
 
 /* Responsive */
 @media screen and (max-width: 900px) {
-  .contactSection {
+  .careerSection {
     flex-direction: column;
     padding: 3rem 6%;
   }

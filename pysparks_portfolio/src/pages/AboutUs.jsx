@@ -1,7 +1,7 @@
 import Navigation from "../components/Navigation";
 import styles from "./AboutUs.module.css";
 import Footer from "../components/Footer";
-import { FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedin } from "react-icons/fa";
 
 export default function AboutUs() {
   return (
@@ -94,14 +94,6 @@ export default function AboutUs() {
 
           <div className={styles.socials}>
             <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Twitter"
-            >
-              <FaTwitter />
-            </a>
-            <a
               href="https://facebook.com"
               target="_blank"
               rel="noreferrer"
@@ -110,12 +102,12 @@ export default function AboutUs() {
               <FaFacebookF />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://facebook.com"
               target="_blank"
               rel="noreferrer"
-              aria-label="Instagram"
+              aria-label="Linkedin"
             >
-              <FaInstagram />
+              <FaLinkedin />
             </a>
           </div>
         </div>

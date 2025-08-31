@@ -3,12 +3,22 @@ import styles from "./Team.module.css";
 
 const founders = [
   {
-    name: "Founder One",
-    role: "Founder · Business Process & Consulting Solutions",
+    name: "Atri Bhattacharaya",
+    role: "Founder · CEO",
     imgSrc: "/team.avif",
   },
   {
-    name: "Founder Two",
+    name: "Sruti Manna",
+    role: "Founder · Web & App Development",
+    imgSrc: "/team.avif",
+  },
+  {
+    name: "Shuvrajiit Adhikari",
+    role: "Founder · TT0",
+    imgSrc: "/team.avif",
+  },
+  {
+    name: "Debanjan Ghosh",
     role: "Founder · Web & App Development",
     imgSrc: "/team.avif",
   },
@@ -16,27 +26,53 @@ const founders = [
 
 const consultants = [
   {
-    name: "Consultant One",
+    name: "Sayak Ghosh",
     role: "Consultant · Analytical Solutions",
     imgSrc: "/team.avif",
   },
   {
-    name: "Consultant Two",
+    name: "Diptorup Ghosh",
     role: "Consultant · AI Bots & Automation",
-    imgSrc: "/team.avif",
-  },
-  {
-    name: "Consultant Three",
-    role: "Consultant · Digital Marketing",
     imgSrc: "/team.avif",
   },
 ];
 
-const advisors = [
-  { name: "Advisor One", role: "Senior Advisor", imgSrc: "/team.avif" },
-  { name: "Advisor Two", role: "Marketing Advisor", imgSrc: "/team.avif" },
-  { name: "Advisor Three", role: "Strategic Advisor", imgSrc: "/team.avif" },
-  { name: "Advisor Four", role: "Financial Advisor", imgSrc: "/team.avif" },
+const expertAdvisors = [
+  { name: "Dr Tushar Kanti Dey", role: "Senior Advisor", imgSrc: "/team.avif" },
+  {
+    name: "Kaushik Mukherjee",
+    role: "Marketing Advisor",
+    imgSrc: "/team.avif",
+  },
+  {
+    name: "Dr Laboni Chakraborty",
+    role: "Strategic Advisor",
+    imgSrc: "/team.avif",
+  },
+  {
+    name: "Debottam Bhattacharya",
+    role: "Financial Advisor",
+    imgSrc: "/team.avif",
+  },
+];
+
+const extendedTeamMembers = [
+  { name: "Sanjita Kumari Jha", role: "Senior Advisor", imgSrc: "/team.avif" },
+  {
+    name: "Sagarike Debnath",
+    role: "Marketing Advisor",
+    imgSrc: "/team.avif",
+  },
+  {
+    name: "Arunima Chaulia",
+    role: "Strategic Advisor",
+    imgSrc: "/team.avif",
+  },
+  {
+    name: "Anuksha Sarkar",
+    role: "Financial Advisor",
+    imgSrc: "/team.avif",
+  },
 ];
 
 export default function MeetOurTeam() {
@@ -84,7 +120,7 @@ export default function MeetOurTeam() {
         style={{ "--delay": "0s" }}
       >
         <h2 className={styles.groupTitle}>
-          Founders <span className={styles.groupUnderline}></span>
+          Founding Members <span className={styles.groupUnderline}></span>
         </h2>
         <div className={styles.members}>
           {founders.map(({ name, role, imgSrc }) => (
@@ -120,16 +156,38 @@ export default function MeetOurTeam() {
         </div>
       </div>
 
-      {/* Advisors */}
+      {/* Expert Advisors */}
       <div
         className={`${styles.group} ${styles.advisors}`}
         style={{ "--delay": "0.6s" }}
       >
         <h2 className={styles.groupTitle}>
-          Advisors <span className={styles.groupUnderline}></span>
+          Expert Advisor Committee
+          <span className={styles.groupUnderline}></span>
         </h2>
         <div className={styles.members}>
-          {advisors.map(({ name, role, imgSrc }) => (
+          {expertAdvisors.map(({ name, role, imgSrc }) => (
+            <div key={name} className={styles.member}>
+              <img src={imgSrc} alt={name} className={styles.photo} />
+              <div className={styles["member-text"]}>
+                <h3 className={styles.name}>{name}</h3>
+                <p className={styles.role}>{role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Extended Team Members */}
+      <div
+        className={`${styles.group} ${styles.advisors}`}
+        style={{ "--delay": "0.6s" }}
+      >
+        <h2 className={styles.groupTitle}>
+          Extended Team Members <span className={styles.groupUnderline}></span>
+        </h2>
+        <div className={styles.members}>
+          {extendedTeamMembers.map(({ name, role, imgSrc }) => (
             <div key={name} className={styles.member}>
               <img src={imgSrc} alt={name} className={styles.photo} />
               <div className={styles["member-text"]}>
