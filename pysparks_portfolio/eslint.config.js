@@ -29,11 +29,11 @@ export default defineConfig([
 
   // Backend: Node.js
   {
-    files: ["backend/**/*.js"],
+    files: ["backend/**/*.js", "api/**/*.js"],
     extends: [js.configs.recommended],
     languageOptions: {
       ecmaVersion: "latest",
-      globals: globals.node, // 👈 this adds process, __dirname, etc
+      globals: globals.node,
       parserOptions: {
         sourceType: "module",
       },
