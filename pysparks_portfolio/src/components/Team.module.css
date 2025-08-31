@@ -12,13 +12,7 @@
   margin: 0 auto;
   padding: 5rem 8%;
   color: #222;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.teamSection.visible {
-  opacity: 1;
+  opacity: 1; /* always visible */
   transform: translateY(0);
 }
 
@@ -44,12 +38,6 @@
   transform: translateX(-50%);
   height: 4px;
   width: 0;
-  /* background: linear-gradient(
-    90deg,
-    #ff416c,
-    #ff4b2b,
-    #ffcc33
-  ); 🔥 gradient like screenshot */
   background-color: #f0a500;
   border-radius: 3px;
   animation: underlineExpand 0.6s ease forwards;
@@ -70,10 +58,14 @@
 .group {
   margin-bottom: 5rem;
   opacity: 0;
-  animation-fill-mode: forwards;
-  animation-duration: var(--fadeDuration);
-  animation-timing-function: var(--fadeEase);
-  animation-delay: var(--delay);
+  transform: translateY(40px);
+  transition: opacity var(--fadeDuration) var(--fadeEase),
+    transform var(--fadeDuration) var(--fadeEase);
+}
+
+.group.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .founders {
@@ -84,10 +76,6 @@
 }
 .advisors {
   animation-name: fadeRight;
-}
-
-.teamSection.visible .group {
-  opacity: 1;
 }
 
 /* Group Titles */
@@ -105,7 +93,6 @@
   left: 0;
   width: 0;
   height: 3px;
-  /* background: linear-gradient(90deg, #36d1dc, #5b86e5); */
   background-color: #f0a500;
   animation: underlineExpand 0.6s ease forwards;
   animation-delay: 0.3s;
@@ -129,6 +116,7 @@
   text-align: center;
   transition: all 0.35s ease;
   transform: translateY(20px);
+  cursor: pointer;
 }
 
 .member:hover {
@@ -155,6 +143,23 @@
 .role {
   font-size: 0.95rem;
   color: #777;
+}
+
+/* Expanded Description */
+.extraDescription {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.member.expanded .extraDescription {
+  max-height: 200px; /* enough space */
+  opacity: 1;
 }
 
 /* Animations */

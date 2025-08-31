@@ -39,7 +39,10 @@ export default function Footer() {
           <h3>CONTACTS</h3>
           <p>+91 79800 58378</p>
           <p>+91 83272 59554</p>
-          <a href="mailto:info@presson.com" className={`${styles.email} email`}>
+          <a
+            href="mailto:info@pysparkslab.com"
+            className={`${styles.email} email`}
+          >
             info@pysparkslab.com
           </a>
           <div className={styles.socials}>
