@@ -1,0 +1,80 @@
+{
+  "founders": [
+    {
+      "name": "Atri Bhattacharaya",
+      "role": "Founder · CEO",
+      "imgSrc": "/team.avif"
+    },
+    {
+      "name": "Sruti Manna",
+      "role": "Founder · Web & App Development",
+      "imgSrc": "/team.avif"
+    },
+    {
+      "name": "Shuvrajiit Adhikari",
+      "role": "Founder · TT0",
+      "imgSrc": "/team.avif"
+    },
+    {
+      "name": "Debanjan Ghosh",
+      "role": "Founder · Web & App Development",
+      "imgSrc": "/team.avif"
+    }
+  ],
+  "consultants": [
+    {
+      "name": "Sayak Ghosh",
+      "role": "Consultant · Analytical Solutions",
+      "imgSrc": "/team.avif"
+    },
+    {
+      "name": "Diptorup Ghosh",
+      "role": "Consultant · AI Bots & Automation",
+      "imgSrc": "/team.avif"
+    }
+  ],
+  "expertAdvisors": [
+    {
+      "name": "Dr Tushar Kanti Dey",
+      "role": "Senior Advisor",
+      "imgSrc": "/team.avif"
+    },
+    {
+      "name": "Kaushik Mukherjee",
+      "role": "Marketing Advisor",
+      "imgSrc": "/team.avif"
+    },
+    {
+      "name": "Progyan Bhattacharya",
+      "role": "Strategic Advisor",
+      "imgSrc": "/team.avif"
+    },
+    {
+      "name": "Debottam Bhattacharya",
+      "role": "Financial Advisor",
+      "imgSrc": "/team.avif"
+    }
+  ],
+  "extendedTeamMembers": [
+    {
+      "name": "Sanjita Kumari Jha",
+      "role": "Senior Advisor",
+      "imgSrc": "/team.avif"
+    },
+    {
+      "name": "Sagarike Debnath",
+      "role": "Marketing Advisor",
+      "imgSrc": "/team.avif"
+    },
+    {
+      "name": "Arunima Chaulia",
+      "role": "Strategic Advisor",
+      "imgSrc": "/team.avif"
+    },
+    {
+      "name": "Anuksha Sarkar",
+      "role": "Financial Advisor",
+      "imgSrc": "/team.avif"
+    }
+  ]
+}

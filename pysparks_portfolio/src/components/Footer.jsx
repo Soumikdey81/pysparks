@@ -38,8 +38,9 @@ export default function Footer() {
         <div className={styles.contacts}>
           <h3>CONTACTS</h3>
           <p>+91 79800 58378</p>
+          <p>+91 83272 59554</p>
           <a href="mailto:info@presson.com" className={`${styles.email} email`}>
-            info@gmail.com
+            info@pysparkslab.com
           </a>
           <div className={styles.socials}>
             <a
@@ -63,9 +64,9 @@ export default function Footer() {
 
         <div className={styles.address}>
           <h3>ADDRESS</h3>
-          {/* <p>123 your street name,</p> */}
           <p>Dp Nagar, Belgharia, Kolkata - 700056</p>
           <p>West Bengal, India</p>
+          <p>LLP IN NO: ACH-0714</p>
         </div>
       </div>
     </footer>
