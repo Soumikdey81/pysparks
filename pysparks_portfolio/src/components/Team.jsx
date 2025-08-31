@@ -1,32 +1,42 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Team.module.css";
 import teamData from "../data/team.json";
 
-export default function MeetOurTeam() {
-  const containerRef = useRef(null);
-  const [visible, setVisible] = useState(false);
+export default function Team() {
+  const [expandedMember, setExpandedMember] = useState(null);
+  const [visibleGroups, setVisibleGroups] = useState({
+    founders: false,
+    consultants: false,
+    advisors: false,
+    extended: false,
+  });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const group = entry.target.getAttribute("data-group");
+            setVisibleGroups((prev) => ({ ...prev, [group]: true }));
+          }
+        });
       },
       { threshold: 0.2 }
     );
 
-    if (containerRef.current) observer.observe(containerRef.current);
+    document
+      .querySelectorAll("[data-group]")
+      .forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
 
+  const toggleExpand = (name) => {
+    setExpandedMember((prev) => (prev === name ? null : name));
+  };
+
   return (
-    <section
-      ref={containerRef}
-      className={`${styles.teamSection} ${visible ? styles.visible : ""}`}
-    >
+    <section className={styles.teamSection}>
       <div className={styles.intro}>
         <h1 className={styles.title}>
           Meet Our Team
@@ -43,19 +53,30 @@ export default function MeetOurTeam() {
 
       {/* Founders */}
       <div
-        className={`${styles.group} ${styles.founders}`}
-        style={{ "--delay": "0s" }}
+        className={`${styles.group} ${
+          visibleGroups.founders ? styles.visible : ""
+        }`}
+        data-group="founders"
       >
         <h2 className={styles.groupTitle}>
           Founding Members <span className={styles.groupUnderline}></span>
         </h2>
         <div className={styles.members}>
-          {teamData.founders.map(({ name, role, imgSrc }) => (
-            <div key={name} className={styles.member}>
+          {teamData.founders.map(({ name, role, imgSrc, description }) => (
+            <div
+              key={name}
+              className={`${styles.member} ${
+                expandedMember === name ? styles.expanded : ""
+              }`}
+              onClick={() => toggleExpand(name)}
+            >
               <img src={imgSrc} alt={name} className={styles.photo} />
               <div className={styles["member-text"]}>
                 <h3 className={styles.name}>{name}</h3>
                 <p className={styles.role}>{role}</p>
+                {expandedMember === name && (
+                  <p className={styles.descriptionText}>{description}</p>
+                )}
               </div>
             </div>
           ))}
@@ -64,65 +85,102 @@ export default function MeetOurTeam() {
 
       {/* Consultants */}
       <div
-        className={`${styles.group} ${styles.consultants}`}
-        style={{ "--delay": "0.3s" }}
+        className={`${styles.group} ${
+          visibleGroups.consultants ? styles.visible : ""
+        }`}
+        data-group="consultants"
       >
         <h2 className={styles.groupTitle}>
           Consultants <span className={styles.groupUnderline}></span>
         </h2>
         <div className={styles.members}>
-          {teamData.consultants.map(({ name, role, imgSrc }) => (
-            <div key={name} className={styles.member}>
+          {teamData.consultants.map(({ name, role, imgSrc, description }) => (
+            <div
+              key={name}
+              className={`${styles.member} ${
+                expandedMember === name ? styles.expanded : ""
+              }`}
+              onClick={() => toggleExpand(name)}
+            >
               <img src={imgSrc} alt={name} className={styles.photo} />
               <div className={styles["member-text"]}>
                 <h3 className={styles.name}>{name}</h3>
                 <p className={styles.role}>{role}</p>
+                {expandedMember === name && (
+                  <p className={styles.descriptionText}>{description}</p>
+                )}
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Expert Advisors */}
+      {/* Advisors */}
       <div
-        className={`${styles.group} ${styles.advisors}`}
-        style={{ "--delay": "0.6s" }}
+        className={`${styles.group} ${
+          visibleGroups.advisors ? styles.visible : ""
+        }`}
+        data-group="advisors"
       >
         <h2 className={styles.groupTitle}>
-          Expert Advisor Committee
+          Expert Advisor Committee{" "}
           <span className={styles.groupUnderline}></span>
         </h2>
         <div className={styles.members}>
-          {teamData.expertAdvisors.map(({ name, role, imgSrc }) => (
-            <div key={name} className={styles.member}>
-              <img src={imgSrc} alt={name} className={styles.photo} />
-              <div className={styles["member-text"]}>
-                <h3 className={styles.name}>{name}</h3>
-                <p className={styles.role}>{role}</p>
+          {teamData.expertAdvisors.map(
+            ({ name, role, imgSrc, description }) => (
+              <div
+                key={name}
+                className={`${styles.member} ${
+                  expandedMember === name ? styles.expanded : ""
+                }`}
+                onClick={() => toggleExpand(name)}
+              >
+                <img src={imgSrc} alt={name} className={styles.photo} />
+                <div className={styles["member-text"]}>
+                  <h3 className={styles.name}>{name}</h3>
+                  <p className={styles.role}>{role}</p>
+                  {expandedMember === name && (
+                    <p className={styles.descriptionText}>{description}</p>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
 
-      {/* Extended Team Members */}
+      {/* Extended Team */}
       <div
-        className={`${styles.group} ${styles.advisors}`}
-        style={{ "--delay": "0.6s" }}
+        className={`${styles.group} ${
+          visibleGroups.extended ? styles.visible : ""
+        }`}
+        data-group="extended"
       >
         <h2 className={styles.groupTitle}>
           Extended Team Members <span className={styles.groupUnderline}></span>
         </h2>
         <div className={styles.members}>
-          {teamData.extendedTeamMembers.map(({ name, role, imgSrc }) => (
-            <div key={name} className={styles.member}>
-              <img src={imgSrc} alt={name} className={styles.photo} />
-              <div className={styles["member-text"]}>
-                <h3 className={styles.name}>{name}</h3>
-                <p className={styles.role}>{role}</p>
+          {teamData.extendedTeamMembers.map(
+            ({ name, role, imgSrc, description }) => (
+              <div
+                key={name}
+                className={`${styles.member} ${
+                  expandedMember === name ? styles.expanded : ""
+                }`}
+                onClick={() => toggleExpand(name)}
+              >
+                <img src={imgSrc} alt={name} className={styles.photo} />
+                <div className={styles["member-text"]}>
+                  <h3 className={styles.name}>{name}</h3>
+                  <p className={styles.role}>{role}</p>
+                  {expandedMember === name && (
+                    <p className={styles.descriptionText}>{description}</p>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
     </section>
